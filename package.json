@@ -5,10 +5,10 @@
   "main": "sw.js",
   "type": "commonjs",
   "scripts": {
-    "build:css": "npx -y minify assets/css/style.css > assets/css/style.min.css",
-    "build:js": "npx -y minify assets/js/script.js > assets/js/script.min.js",
-    "build:html": "npx -y minify index.html > index.min.html",
-    "build": "echo 'Build estático concluído com sucesso'"
+    "build:css": "node -e \"require('minify')('assets/css/style.css').then(console.log)\" > assets/css/style.min.css",
+    "build:js": "node -e \"require('minify')('assets/js/script.js').then(console.log)\" > assets/js/script.min.js",
+    "build:html": "node -e \"require('minify')('index.html').then(console.log)\" > index.min.html",
+    "build": "npm run build:css && npm run build:js && npm run build:html"
   },
   "repository": {
     "type": "git",
