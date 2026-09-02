@@ -10,6 +10,10 @@
     "build:html": "node -e \"require('minify')('index.html').then(console.log)\" > index.min.html",
     "build": "npm run build:css && npm run build:js && npm run build:html"
   },
+    "allowScripts": {
+    "@swc/core": true,
+    "esbuild": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vickvick0710-projetos/projeto-palco-mambembe.git"
