@@ -1,0 +1,27 @@
+{
+  "name": "palco-mambembe",
+  "version": "1.0.0",
+  "description": "Cia de Teatro Palco Mambembe - 10 Anos",
+  "main": "sw.js",
+  "type": "commonjs",
+  "scripts": {
+    "build:css": "npx minify assets/css/style.css > assets/css/style.min.css",
+    "build:js": "npx minify assets/js/script.js > assets/js/script.min.js",
+    "build:html": "npx minify index.html > index.min.html",
+    "build": "npm run build:css && npm run build:js && npm run build:html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vickvick0710-projetos/projeto-palco-mambembe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vickvick0710-projetos/projeto-palco-mambembe/issues"
+  },
+  "homepage": "https://github.com/vickvick0710-projetos/projeto-palco-mambembe#readme",
+  "devDependencies": {
+    "minify": "^15.3.1"
+  }
+}

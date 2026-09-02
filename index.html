@@ -2,15 +2,18 @@
 <html lang="pt-BR">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-24KL7CLNW8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-24KL7CLNW8');
-</script>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#d4af37" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-24KL7CLNW8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-24KL7CLNW8');
+  </script>
   <!-- GoAdopt Cookie Banner (Com HTTPS para validação) -->
   <meta name="adopt-website-id" content="891f3b0a-234a-4bb3-8258-989081d461b2" />
   <script src="https://tag.goadopt.io/injector.js?website_code=891f3b0a-234a-4bb3-8258-989081d461b2"
@@ -388,9 +391,9 @@
           © 2016-2026 Cia. de Teatro Palco Mambembe. Todos os direitos reservados. Feito com paixão e arte.
         </p>
         <p class="small mb-0">
-          <a href="politica-privacidade.html" class="text-gold text-decoration-none me-3"><i
+          <a href="documentos/politica-privacidade.html" class="text-gold text-decoration-none me-3"><i
               class="bi bi-shield-check me-1"></i>Política de Privacidade & Cookies</a>
-          <a href="politica-privacidade.html" class="text-gold text-decoration-none"><i
+          <a href="documentos/termos-uso.html" class="text-gold text-decoration-none"><i
               class="bi bi-file-earmark-text me-1"></i>Termos de Uso</a>
         </p>
       </div>
@@ -432,6 +435,14 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
+  
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
+</script>
 </body>
 
 </html>
